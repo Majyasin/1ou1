@@ -1,4 +1,4 @@
-# CodeForge AI 🚀
+# CodeForge AI
 
 ![CodeForge AI](https://img.shields.io/badge/AI-Powered-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
@@ -9,29 +9,29 @@
 
 CodeForge AI is a revolutionary web application builder that surpasses Lovable with advanced AI capabilities, better developer experience, and more powerful features. Build production-ready applications using natural language powered by Claude Sonnet 4.
 
-## ✨ Features
+## Features
 
 ### Core Features
 
-- **🤖 AI Code Generation**: Claude Sonnet 4 generates production-ready code from natural language prompts
-- **💻 Advanced Code Editor**: Monaco editor with IntelliSense, auto-completion, and syntax highlighting for 50+ languages
-- **⚡ Live Preview**: Real-time preview with hot reload across desktop, tablet, and mobile views
-- **💬 AI Chat Assistant**: Context-aware AI assistant for code generation, debugging, and guidance
-- **📁 Project Management**: Create, save, and manage multiple projects with auto-save
-- **🎨 Template Marketplace**: Start with professionally designed templates for common use cases
+- **[AI] AI Code Generation**: Claude Sonnet 4 generates production-ready code from natural language prompts
+- **[CODE] Advanced Code Editor**: Monaco editor with IntelliSense, auto-completion, and syntax highlighting for 50+ languages
+- **[PREVIEW] Live Preview**: Real-time preview with hot reload across desktop, tablet, and mobile views
+- **[CHAT] AI Chat Assistant**: Context-aware AI assistant for code generation, debugging, and guidance
+- **[FOLDER] Project Management**: Create, save, and manage multiple projects with auto-save
+- **[TEMPLATE] Template Marketplace**: Start with professionally designed templates for common use cases
 
 ### Advanced Features (Beyond Lovable)
 
-- **🎯 Component Library**: Drag-and-drop interface builder with reusable components
-- **🗄️ Visual Database Designer**: Design schemas with AI assistance and instant migrations
-- **🔄 Version Control**: Built-in Git-like versioning with unlimited undo/redo
-- **🚀 One-Click Deployment**: Deploy to Vercel, Netlify, or custom servers
-- **👥 Real-Time Collaboration**: Work together like Figma with live cursors
-- **🔌 API Testing**: Built-in API playground for testing endpoints
-- **📊 Performance Metrics**: Monitor performance, bundle size, and optimization opportunities
-- **🔒 Enterprise Security**: Sandboxed execution, encrypted storage, and secure deployments
+- **[COMPONENT] Component Library**: Drag-and-drop interface builder with reusable components
+- **[DATABASE] Visual Database Designer**: Design schemas with AI assistance and instant migrations
+- **[VERSION] Version Control**: Built-in Git-like versioning with unlimited undo/redo
+- **[DEPLOY] One-Click Deployment**: Deploy to Vercel, Netlify, or custom servers
+- **[COLLAB] Real-Time Collaboration**: Work together like Figma with live cursors
+- **[API] API Testing**: Built-in API playground for testing endpoints
+- **[METRICS] Performance Metrics**: Monitor performance, bundle size, and optimization opportunities
+- **[SECURITY] Enterprise Security**: Sandboxed execution, encrypted storage, and secure deployments
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -73,7 +73,7 @@ CodeForge AI is a revolutionary web application builder that surpasses Lovable w
 5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 🎯 Quick Start Guide
+## Quick Start Guide
 
 ### Creating Your First Project
 
@@ -107,7 +107,7 @@ CodeForge AI is a revolutionary web application builder that surpasses Lovable w
    - Click "Export" to download your project
    - Use "Deploy" for one-click deployment
 
-## 🏗️ Architecture
+## Architecture
 
 ### Tech Stack
 
@@ -154,7 +154,7 @@ codeforge-ai/
 └── public/              # Static assets
 ```
 
-## 🎨 Features in Detail
+## Features in Detail
 
 ### AI Code Generation
 
@@ -198,7 +198,7 @@ Start faster with pre-built templates:
 - **Blog Platform**: Content management with markdown
 - **Portfolio Site**: Project showcase and contact form
 
-## 📚 API Reference
+## API Reference
 
 ### AI Generation API
 
@@ -221,7 +221,7 @@ POST /api/ai/chat
 }
 ```
 
-## 🔒 Security
+## Security
 
 - **Sandboxed Preview**: Code runs in isolated iframes
 - **API Key Encryption**: Sensitive data encrypted at rest
@@ -230,7 +230,7 @@ POST /api/ai/chat
 - **Rate Limiting**: Prevent API abuse
 - **HTTPS Only**: Secure connections required
 
-## 🚀 Deployment
+## Deployment
 
 ### Deploy to Vercel
 
@@ -253,7 +253,7 @@ npm run build
 npm start
 ```
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
@@ -263,11 +263,11 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for deta
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Next.js](https://nextjs.org/) - The React framework
 - [Anthropic](https://www.anthropic.com/) - Claude AI API
@@ -275,36 +275,32 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Shadcn/ui](https://ui.shadcn.com/) - UI components
 - [Supabase](https://supabase.com/) - Backend infrastructure
 
-## 📞 Support
+## Support
 
-- 📧 Email: support@codeforge.ai
-- 💬 Discord: [Join our community](https://discord.gg/codeforge)
-- 🐦 Twitter: [@codeforgeai](https://twitter.com/codeforgeai)
-- 📖 Docs: [docs.codeforge.ai](https://docs.codeforge.ai)
+- **Email**: support@codeforge.ai
+- **Discord**: [Join our community](https://discord.gg/codeforge)
+- **Twitter**: [@codeforgeai](https://twitter.com/codeforgeai)
+- **Documentation**: [docs.codeforge.ai](https://docs.codeforge.ai)
 
-## 🗺️ Roadmap
+## Roadmap
 
-- [ ] **Q1 2025**
-  - [ ] Mobile app (iOS/Android)
-  - [ ] GitHub integration for direct commits
-  - [ ] Team collaboration features
+- **Q1 2025**
+  - Mobile app (iOS/Android)
+  - GitHub integration for direct commits
+  - Team collaboration features
 
-- [ ] **Q2 2025**
-  - [ ] Plugin system for extensions
-  - [ ] Custom AI model fine-tuning
-  - [ ] Advanced debugging tools
+- **Q2 2025**
+  - Plugin system for extensions
+  - Custom AI model fine-tuning
+  - Advanced debugging tools
 
-- [ ] **Q3 2025**
-  - [ ] Multi-language support (Python, Go, etc.)
-  - [ ] Cloud IDE integration
-  - [ ] Enterprise features
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/codeforge-ai&type=Date)](https://star-history.com/#yourusername/codeforge-ai&Date)
+- **Q3 2025**
+  - Multi-language support (Python, Go, etc.)
+  - Cloud IDE integration
+  - Enterprise features
 
 ---
 
-**Built with ❤️ using Next.js, TypeScript, and Claude Sonnet 4**
+**Built with care using Next.js, TypeScript, and Claude Sonnet 4**
 
 *CodeForge AI - Build Apps with AI, 10x Faster*
