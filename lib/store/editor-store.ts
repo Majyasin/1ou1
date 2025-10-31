@@ -29,6 +29,7 @@ interface EditorState {
   // UI State
   showPreview: boolean;
   showChat: boolean;
+  showTerminal: boolean;
   previewMode: "desktop" | "tablet" | "mobile";
 
   // Actions
@@ -44,6 +45,7 @@ interface EditorState {
 
   togglePreview: () => void;
   toggleChat: () => void;
+  toggleTerminal: () => void;
   setPreviewMode: (mode: "desktop" | "tablet" | "mobile") => void;
 }
 
@@ -55,6 +57,7 @@ export const useEditorStore = create<EditorState>((set) => ({
   activeFileId: null,
   showPreview: true,
   showChat: true,
+  showTerminal: true,
   previewMode: "desktop",
 
   // Project actions
@@ -113,5 +116,6 @@ export const useEditorStore = create<EditorState>((set) => ({
   // UI actions
   togglePreview: () => set((state) => ({ showPreview: !state.showPreview })),
   toggleChat: () => set((state) => ({ showChat: !state.showChat })),
+  toggleTerminal: () => set((state) => ({ showTerminal: !state.showTerminal })),
   setPreviewMode: (mode) => set({ previewMode: mode }),
 }));

@@ -14,6 +14,7 @@ import {
   Eye,
   MessageSquare,
   FolderOpen,
+  Terminal as TerminalIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEditorStore } from "@/lib/store/editor-store";
@@ -23,8 +24,15 @@ import toast from "react-hot-toast";
 export function EditorHeader() {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
-  const { currentProject, showPreview, showChat, togglePreview, toggleChat } =
-    useEditorStore();
+  const {
+    currentProject,
+    showPreview,
+    showChat,
+    showTerminal,
+    togglePreview,
+    toggleChat,
+    toggleTerminal,
+  } = useEditorStore();
   const [isSaving, setIsSaving] = useState(false);
 
   const handleSave = async () => {
@@ -108,6 +116,15 @@ export function EditorHeader() {
         >
           <MessageSquare className="w-4 h-4 mr-2" />
           AI Chat
+        </Button>
+
+        <Button
+          variant={showTerminal ? "default" : "ghost"}
+          size="sm"
+          onClick={toggleTerminal}
+        >
+          <TerminalIcon className="w-4 h-4 mr-2" />
+          Terminal
         </Button>
 
         <div className="h-6 w-px bg-border mx-2" />
