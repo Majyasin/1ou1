@@ -16,10 +16,12 @@ import {
   FolderOpen,
   Terminal as TerminalIcon,
   Sparkles,
+  Share2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEditorStore } from "@/lib/store/editor-store";
 import { useTheme } from "next-themes";
+import { ShareDialog } from "./share-dialog";
 import toast from "react-hot-toast";
 
 export function EditorHeader() {
@@ -37,6 +39,7 @@ export function EditorHeader() {
     toggleSuggestions,
   } = useEditorStore();
   const [isSaving, setIsSaving] = useState(false);
+  const [shareDialogOpen, setShareDialogOpen] = useState(false);
 
   const handleSave = async () => {
     setIsSaving(true);
@@ -101,6 +104,15 @@ export function EditorHeader() {
           Export
         </Button>
 
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setShareDialogOpen(true)}
+        >
+          <Share2 className="w-4 h-4 mr-2" />
+          Share
+        </Button>
+
         <div className="h-6 w-px bg-border mx-2" />
 
         <Button
@@ -157,6 +169,14 @@ export function EditorHeader() {
           <Settings className="w-4 h-4" />
         </Button>
       </div>
+
+      {/* Share Dialog */}
+      <ShareDialog
+        open={shareDialogOpen}
+        onOpenChange={setShareDialogOpen}
+        projectId={currentProject?.id || "untitled"}
+        projectName={currentProject?.name || "Untitled Project"}
+      />
     </header>
   );
 }
