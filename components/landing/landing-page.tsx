@@ -27,56 +27,48 @@ const features = [
     title: "AI-Powered Generation",
     description:
       "Claude Sonnet 4 generates production-ready code from natural language with unprecedented accuracy",
-    gradient: "from-violet-500 to-purple-500",
   },
   {
     icon: Code2,
     title: "Professional Code Editor",
     description:
       "Monaco editor with IntelliSense, auto-completion, and real-time collaboration built-in",
-    gradient: "from-blue-500 to-cyan-500",
   },
   {
     icon: Zap,
     title: "Instant Live Preview",
     description:
       "See changes in real-time with hot reload across desktop, tablet, and mobile viewports",
-    gradient: "from-amber-500 to-orange-500",
   },
   {
     icon: Database,
     title: "Visual Database Designer",
     description:
       "Design schemas visually with AI assistance, automatic migrations, and relationship mapping",
-    gradient: "from-green-500 to-emerald-500",
   },
   {
     icon: GitBranch,
     title: "Built-in Version Control",
     description:
       "Full versioning system with unlimited undo/redo, branching, and seamless GitHub integration",
-    gradient: "from-pink-500 to-rose-500",
   },
   {
     icon: Rocket,
     title: "One-Click Deployment",
     description:
       "Deploy instantly to Vercel, Netlify, or custom servers with zero configuration required",
-    gradient: "from-indigo-500 to-blue-500",
   },
   {
     icon: Users,
     title: "Real-Time Collaboration",
     description:
       "Work together seamlessly with live cursors, instant sync, and team permissions",
-    gradient: "from-teal-500 to-cyan-500",
   },
   {
     icon: Shield,
     title: "Enterprise Security",
     description:
       "Military-grade sandboxed execution, encrypted storage, and SOC 2 Type II compliance",
-    gradient: "from-red-500 to-orange-500",
   },
 ];
 
@@ -120,29 +112,29 @@ export function LandingPage() {
 
   const handleGetStarted = () => {
     setIsLoading(true);
-    router.push("/editor");
+    router.push("/sign-up");
   };
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden relative">
+    <div className="min-h-screen bg-white overflow-hidden relative">
       {/* Animated Background */}
       <motion.div
         style={{ y: backgroundY }}
         className="absolute inset-0 -z-10"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-background to-cyan-500/5" />
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-violet-500/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-lavender-light/30 via-white to-lavender-light/20" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-lavender/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-lavender-light/40 rounded-full blur-3xl" />
       </motion.div>
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border/40">
+      <nav className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-gray-200">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-violet-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-black flex items-center justify-center">
               <Terminal className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            <span className="text-xl font-bold text-black">
               CodeForge AI
             </span>
           </div>
@@ -153,7 +145,7 @@ export function LandingPage() {
             <Button variant="ghost" onClick={() => router.push("/projects")}>
               Projects
             </Button>
-            <Button onClick={handleGetStarted} className="gap-2">
+            <Button onClick={handleGetStarted} className="gap-2 bg-black hover:bg-black/90 text-white">
               <Sparkles className="w-4 h-4" />
               Launch Editor
             </Button>
@@ -174,24 +166,24 @@ export function LandingPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-gradient-to-r from-primary/10 via-violet-500/10 to-primary/10 border border-primary/20 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-lavender-light border border-lavender/30 backdrop-blur-sm"
           >
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium bg-gradient-to-r from-primary to-violet-600 bg-clip-text text-transparent">
+            <div className="w-2 h-2 rounded-full bg-lavender animate-pulse" />
+            <Sparkles className="w-4 h-4 text-lavender" />
+            <span className="text-sm font-medium text-black">
               Powered by Claude Sonnet 4 - The Most Advanced AI
             </span>
-            <Star className="w-4 h-4 text-primary fill-primary" />
+            <Star className="w-4 h-4 text-lavender fill-lavender" />
           </motion.div>
 
           {/* Main Heading */}
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8">
-            <span className="bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+            <span className="text-black">
               Build Production
               <br />
               Apps in
             </span>{" "}
-            <span className="bg-gradient-to-r from-violet-600 via-primary to-cyan-600 bg-clip-text text-transparent animate-pulse">
+            <span className="text-lavender">
               Seconds
             </span>
           </h1>
@@ -211,7 +203,7 @@ export function LandingPage() {
               size="lg"
               onClick={handleGetStarted}
               disabled={isLoading}
-              className="text-lg px-10 py-7 rounded-xl bg-gradient-to-r from-primary via-violet-600 to-primary bg-size-200 animate-gradient shadow-2xl shadow-primary/50 hover:shadow-primary/60 transition-all"
+              className="text-lg px-10 py-7 rounded-xl bg-black hover:bg-black/90 text-white shadow-2xl shadow-lavender/30 hover:shadow-lavender/40 transition-all"
             >
               {isLoading ? (
                 <>
@@ -229,7 +221,7 @@ export function LandingPage() {
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-10 py-7 rounded-xl border-2 hover:bg-accent/50 backdrop-blur-sm"
+              className="text-lg px-10 py-7 rounded-xl border-2 border-black hover:bg-lavender-light backdrop-blur-sm"
               onClick={() => router.push("/templates")}
             >
               <Layers className="mr-2 w-5 h-5" />
@@ -245,11 +237,11 @@ export function LandingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
-                className="p-4 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/40"
+                className="p-4 rounded-2xl bg-white backdrop-blur-sm border border-gray-200 shadow-sm"
               >
-                <stat.icon className="w-6 h-6 mx-auto mb-2 text-primary" />
-                <div className="text-3xl font-bold mb-1">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <stat.icon className="w-6 h-6 mx-auto mb-2 text-lavender" />
+                <div className="text-3xl font-bold mb-1 text-black">{stat.value}</div>
+                <div className="text-sm text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -261,32 +253,32 @@ export function LandingPage() {
             transition={{ delay: 0.4, duration: 0.7, type: "spring" }}
             className="relative group"
           >
-            <div className="absolute -inset-1 bg-gradient-to-r from-violet-600 via-primary to-cyan-600 rounded-2xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity" />
-            <div className="relative rounded-2xl overflow-hidden border-2 border-border/40 bg-card/80 backdrop-blur-xl shadow-2xl">
-              <div className="bg-muted/30 px-6 py-4 flex items-center gap-3 border-b border-border/40 backdrop-blur-sm">
+            <div className="absolute -inset-1 bg-lavender rounded-2xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity" />
+            <div className="relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white backdrop-blur-xl shadow-2xl">
+              <div className="bg-gray-50 px-6 py-4 flex items-center gap-3 border-b border-gray-200">
                 <div className="flex gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors cursor-pointer" />
                   <div className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors cursor-pointer" />
                   <div className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-600 transition-colors cursor-pointer" />
                 </div>
                 <div className="flex-1 text-center">
-                  <span className="text-sm font-medium text-muted-foreground">
+                  <span className="text-sm font-medium text-gray-600">
                     CodeForge AI Editor
                   </span>
                 </div>
                 <div className="flex gap-2">
                   <Check className="w-4 h-4 text-green-500" />
-                  <span className="text-xs text-muted-foreground">Ready</span>
+                  <span className="text-xs text-gray-600">Ready</span>
                 </div>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-violet-500/10 via-background to-cyan-500/10 flex items-center justify-center relative overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-lavender-light/30 via-white to-lavender-light/20 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-grid-white/5" />
                 <div className="text-center relative z-10">
-                  <div className="inline-flex items-center justify-center w-32 h-32 rounded-2xl bg-gradient-to-br from-primary/20 to-violet-600/20 backdrop-blur-sm border border-primary/20 mb-6">
-                    <Terminal className="w-16 h-16 text-primary" />
+                  <div className="inline-flex items-center justify-center w-32 h-32 rounded-2xl bg-black mb-6">
+                    <Terminal className="w-16 h-16 text-white" />
                   </div>
-                  <p className="text-xl font-medium mb-2">Your AI-powered workspace</p>
-                  <p className="text-muted-foreground">Start building in seconds</p>
+                  <p className="text-xl font-medium mb-2 text-black">Your AI-powered workspace</p>
+                  <p className="text-gray-600">Start building in seconds</p>
                 </div>
               </div>
             </div>
@@ -303,18 +295,18 @@ export function LandingPage() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-20"
         >
-          <motion.div variants={item} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <Layers className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">Powerful Features</span>
+          <motion.div variants={item} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lavender-light border border-lavender/30 mb-6">
+            <Layers className="w-4 h-4 text-lavender" />
+            <span className="text-sm font-medium text-black">Powerful Features</span>
           </motion.div>
           <motion.h2 variants={item} className="text-5xl md:text-6xl font-black tracking-tight mb-6">
-            Everything you need,
+            <span className="text-black">Everything you need,</span>
             <br />
-            <span className="bg-gradient-to-r from-primary to-violet-600 bg-clip-text text-transparent">
+            <span className="text-lavender">
               Built right in
             </span>
           </motion.h2>
-          <motion.p variants={item} className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <motion.p variants={item} className="text-xl text-gray-600 max-w-2xl mx-auto">
             Enterprise-grade tools and features that professional developers love
           </motion.p>
         </motion.div>
@@ -328,14 +320,14 @@ export function LandingPage() {
         >
           {features.map((feature) => (
             <motion.div key={feature.title} variants={item} className="group">
-              <div className="h-full p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/40 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
-                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} mb-4 group-hover:scale-110 transition-transform`}>
+              <div className="h-full p-6 rounded-2xl bg-white backdrop-blur-sm border border-gray-200 hover:border-lavender/50 transition-all hover:shadow-xl hover:shadow-lavender/10 hover:-translate-y-1">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-black mb-4 group-hover:scale-110 transition-transform">
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-black group-hover:text-lavender transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -351,12 +343,11 @@ export function LandingPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-3xl"
+          className="relative overflow-hidden rounded-3xl bg-black"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-violet-600 via-primary to-cyan-600" />
           <div className="absolute inset-0 bg-grid-white/10" />
           <div className="relative px-12 py-20 text-center text-white">
-            <Rocket className="w-16 h-16 mx-auto mb-6 animate-bounce" />
+            <Rocket className="w-16 h-16 mx-auto mb-6 animate-bounce text-lavender" />
             <h2 className="text-5xl md:text-6xl font-black mb-6">
               Ready to build something amazing?
             </h2>
@@ -366,10 +357,9 @@ export function LandingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                variant="secondary"
                 onClick={handleGetStarted}
                 disabled={isLoading}
-                className="text-lg px-10 py-7 rounded-xl shadow-2xl hover:shadow-xl transition-all"
+                className="text-lg px-10 py-7 rounded-xl bg-lavender hover:bg-lavender-dark text-white shadow-2xl hover:shadow-xl transition-all"
               >
                 <Sparkles className="mr-2 w-5 h-5" />
                 Start Building Now
@@ -381,16 +371,16 @@ export function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-12 border-t border-border/40">
+      <footer className="container mx-auto px-4 py-12 border-t border-gray-200">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <Terminal className="w-5 h-5 text-primary" />
-            <span className="font-semibold">CodeForge AI</span>
+            <Terminal className="w-5 h-5 text-black" />
+            <span className="font-semibold text-black">CodeForge AI</span>
           </div>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-gray-600">
             Built with Next.js, TypeScript, and Claude Sonnet 4
           </p>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-gray-600">
             © 2024 CodeForge AI. All rights reserved.
           </p>
         </div>
