@@ -1,7 +1,7 @@
 "use client";
 
-import { EditorLayout } from "@/components/editor/editor-layout";
+import { UnifiedEditorLayout } from "@/components/editor/unified-editor-layout";
 
 export default function EditorPage() {
-  return <EditorLayout />;
+  return <UnifiedEditorLayout />;
 }
