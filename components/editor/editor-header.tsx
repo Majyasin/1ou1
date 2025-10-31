@@ -15,6 +15,7 @@ import {
   MessageSquare,
   FolderOpen,
   Terminal as TerminalIcon,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEditorStore } from "@/lib/store/editor-store";
@@ -29,9 +30,11 @@ export function EditorHeader() {
     showPreview,
     showChat,
     showTerminal,
+    showSuggestions,
     togglePreview,
     toggleChat,
     toggleTerminal,
+    toggleSuggestions,
   } = useEditorStore();
   const [isSaving, setIsSaving] = useState(false);
 
@@ -125,6 +128,15 @@ export function EditorHeader() {
         >
           <TerminalIcon className="w-4 h-4 mr-2" />
           Terminal
+        </Button>
+
+        <Button
+          variant={showSuggestions ? "default" : "ghost"}
+          size="sm"
+          onClick={toggleSuggestions}
+        >
+          <Sparkles className="w-4 h-4 mr-2" />
+          AI Suggestions
         </Button>
 
         <div className="h-6 w-px bg-border mx-2" />

@@ -10,11 +10,12 @@ import { EditorHeader } from "./editor-header";
 import { QuickActions } from "./quick-actions";
 import { Terminal } from "./terminal";
 import { CommandPalette } from "./command-palette";
+import { AISuggestions } from "./ai-suggestions";
 import { useEditorStore } from "@/lib/store/editor-store";
 import toast from "react-hot-toast";
 
 export function EditorLayout() {
-  const { showPreview, showChat, showTerminal } = useEditorStore();
+  const { showPreview, showChat, showTerminal, showSuggestions } = useEditorStore();
   const [isGenerating, setIsGenerating] = useState(false);
 
   // Check for initial prompt from landing page and trigger AI generation
@@ -110,6 +111,16 @@ export function EditorLayout() {
                   <PanelResizeHandle className="w-1 bg-border hover:bg-lavender transition-colors" />
                   <Panel defaultSize={25} minSize={20} maxSize={40}>
                     <AIChat />
+                  </Panel>
+                </>
+              )}
+
+              {/* AI Suggestions Panel */}
+              {showSuggestions && (
+                <>
+                  <PanelResizeHandle className="w-1 bg-border hover:bg-lavender transition-colors" />
+                  <Panel defaultSize={25} minSize={20} maxSize={40}>
+                    <AISuggestions />
                   </Panel>
                 </>
               )}

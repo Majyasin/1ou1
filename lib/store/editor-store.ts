@@ -30,6 +30,7 @@ interface EditorState {
   showPreview: boolean;
   showChat: boolean;
   showTerminal: boolean;
+  showSuggestions: boolean;
   previewMode: "desktop" | "tablet" | "mobile";
 
   // Actions
@@ -46,6 +47,7 @@ interface EditorState {
   togglePreview: () => void;
   toggleChat: () => void;
   toggleTerminal: () => void;
+  toggleSuggestions: () => void;
   setPreviewMode: (mode: "desktop" | "tablet" | "mobile") => void;
 }
 
@@ -56,8 +58,9 @@ export const useEditorStore = create<EditorState>((set) => ({
   openFiles: [],
   activeFileId: null,
   showPreview: true,
-  showChat: true,
+  showChat: false,
   showTerminal: true,
+  showSuggestions: true,
   previewMode: "desktop",
 
   // Project actions
@@ -117,5 +120,6 @@ export const useEditorStore = create<EditorState>((set) => ({
   togglePreview: () => set((state) => ({ showPreview: !state.showPreview })),
   toggleChat: () => set((state) => ({ showChat: !state.showChat })),
   toggleTerminal: () => set((state) => ({ showTerminal: !state.showTerminal })),
+  toggleSuggestions: () => set((state) => ({ showSuggestions: !state.showSuggestions })),
   setPreviewMode: (mode) => set({ previewMode: mode }),
 }));
